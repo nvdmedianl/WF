@@ -81,11 +81,13 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            opacity: 1.0,
-            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
-        });
-        layer_OSMStandard_0;
+        var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    opacity: 1.0,
+    subdomains:['mt0','mt1','mt2','mt3']
+  });
+
+googleHybrid;
         map.addLayer(layer_OSMStandard_0);
         function pop_wf_1(feature, layer) {
             layer.on({
